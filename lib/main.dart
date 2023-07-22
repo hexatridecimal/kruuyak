@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 import 'question_model.dart';
 import 'quiz_provider.dart';
 import 'quiz_screen.dart';
+import 'lessons_screen.dart';
+
+import 'lessons_screen.dart';
+import 'lessons_provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,14 +17,23 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: ChangeNotifierProvider(
-        create: (context) => QuizProvider()..loadQuestions(),
-        child: QuizScreen(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => LessonsProvider()),
+        ChangeNotifierProvider(create: (context) => QuizProvider()), // Provide the QuizProvider here
+        // Add other providers if needed
+      ],
+      child: MaterialApp(
+        // home: ChangeNotifierProvider(
+        //   create: (context) => QuizProvider()..loadQuestions(),
+        //   child: QuizScreen(),
+        // ),
+        home: LessonsScreen(),
       ),
     );
   }
 }
+
 
 class QuestionCard extends StatelessWidget {
   final QuestionModel question;

@@ -1,0 +1,23 @@
+{
+    "title": "Writing 1",
+    "elements": [
+        {
+            "name": "Lesson 1",
+            "file": "assets/lesson1.json",
+            "video": "assets/lesson1.mp4",
+            "quiz": false
+        },
+        {
+            "name": "Test 1",
+            "file": "assets/test1.json",
+            "video": "assets/lesson1.mp4",
+            "quiz": true
+        },
+        {
+            "name": "Lesson 2",
+            "file": "assets/lesson2.json",
+            "video": "assets/lesson1.mp4",
+            "quiz": false
+        }
+    ]
+}

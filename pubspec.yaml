@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   provider: ^6.0.0
+  video_player: ^2.7.0
 
 dev_dependencies:
   flutter_test:
@@ -60,7 +61,10 @@ flutter:
   uses-material-design: true
 
   assets:
-  - assets/test1.json
+    - assets/test1.json
+    - assets/lesson1.json
+    - assets/lessons_data.json
+    - assets/lesson1.mp4
 
   # To add assets to your application, add an assets section, like this:
   # assets:

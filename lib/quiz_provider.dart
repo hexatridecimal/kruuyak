@@ -23,9 +23,9 @@ class QuizProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> loadQuestions() async {
+  Future<void> loadQuestions(String filePath) async {
     try {
-      String jsonString = await rootBundle.loadString('assets/test1.json');
+      String jsonString = await rootBundle.loadString(filePath);
       List<dynamic> jsonMap = jsonDecode(jsonString);
       _questions = jsonMap
           .map((json) => QuestionModel(
